@@ -2,6 +2,14 @@
 
 <!-- do not remove -->
 
+## 0.6.1
+
+
+### Bugs Squashed
+
+- Fixed topics with dots causing failure of tester instantiation ([#305](https://github.com/airtai/fastkafka/pull/305)), thanks to [@Sternakt](https://github.com/Sternakt)
+
+
 ## 0.6.0
 
 ### New Features
