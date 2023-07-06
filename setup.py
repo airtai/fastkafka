@@ -68,7 +68,7 @@ dev_requirements = [
     "pydantic[email]>=1.9,<2.0",
     "scikit-learn==1.2.1",
     "ipython<8.13",
-    "fastapi>=0.95.1",
+    "fastapi>=0.95.1,<0.99",
     "uvicorn==0.22.0",
 ]
 
