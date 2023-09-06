@@ -2,8 +2,37 @@ site_name: FastStream
 site_url: https://faststream.airt.ai/
 copyright: '&copy; 2023 <a href="https://airt.ai/" target="_blank" rel="noopener">airt</a>'
 docs_dir: docs
+
+extra_css:
+  - assets/stylesheets/termynal.css
+  - assets/stylesheets/custom.css
+
+extra_javascript:
+  - assets/javascripts/termynal.js
+  - assets/javascripts/custom.js
+
+  
 nav:
 - FastStream: index.md
+- Getting Started:
+  - Hello, FastStream!: getting_started/1_quick-start.md
+  - CLI Tool: getting_started/2_cli.md
+  - Application: getting_started/3_app.md
+  - Brokers:
+    - Basics: getting_started/4_broker/1_index.md
+    - Routing and Errors: getting_started/4_broker/2_routing.md
+    - Incoming Messages: getting_started/4_broker/3_type-casting.md
+    - Custom Serialization: getting_started/4_broker/4_custom_serialization.md
+    - Publish Messages: getting_started/4_broker/5_publishing.md
+    - RPC over MQ: getting_started/4_broker/6_rpc.md
+  - Dependency Injection:
+    - Depends: getting_started/5_dependency/1_di-index.md
+    - Context: getting_started/5_dependency/2_context.md
+  - Lifespan: getting_started/6_lifespans.md
+  - Testing: getting_started/7_testing.md
+  - Logging: getting_started/8_logging.md
+  - Documentation: getting_started/9_documentation.md
+  - Project Settings: getting_started/10_settings.md
 - API:
   - api/FastStream.md
   - kafka:
@@ -48,8 +77,12 @@ theme:
 repo_name: airtai/fastkafka
 repo_url: https://github.com/airtai/fastkafka
 edit_uri: ''
+
 plugins:
 - search
+- glightbox
+- macros:
+    include_dir: includes
 - mkdocstrings:
     default_handler: python
     handlers:
@@ -68,26 +101,67 @@ plugins:
       default: true
       name: English
       build: true
-markdown_extensions:
-  toc:
-    permalink: true
-  markdown.extensions.codehilite:
-    guess_lang: false
-  mdx_include:
-    base_path: .
-  admonition: null
-  codehilite: null
-  extra: null
-  pymdownx.superfences:
-    custom_fences:
-    - name: mermaid
-      class: mermaid
-      format: !!python/name:pymdownx.superfences.fence_code_format ''
-  pymdownx.tabbed:
-    alternate_style: true
-  attr_list: null
-  md_in_html: null
+
+
+# markdown_extensions:
+#   toc:
+#     permalink: true
+#   markdown.extensions.codehilite:
+#     guess_lang: false
+#   mdx_include:
+#     base_path: .
+#   admonition: null
+#   codehilite: null
+#   extra: null
+#   pymdownx.superfences:
+#     custom_fences:
+#     - name: mermaid
+#       class: mermaid
+#       format: !!python/name:pymdownx.superfences.fence_code_format ''
+#   pymdownx.tabbed:
+#     alternate_style: true
+#   attr_list: null
+#   md_in_html: null
+
+markdown_extensions:  # do not reorder
+  - toc:
+      permalink: true
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - mdx_include:
+      base_path: .
+  - footnotes
+  - tables
+  - admonition
+  - codehilite
+  - extra
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format ''
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji ""
+      emoji_generator: !!python/name:materialx.emoji.to_svg ""
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  
 extra:
+  urls:
+    fastapi: https://fastapi.tiangolo.com/ru/
+    redis: https://redis.readthedocs.io/en/stable/index.html
+    aio_pika: https://aio-pika.readthedocs.io/en/latest/
+    pika: https://pika.readthedocs.io/en/stable/
+    aiokafka: https://aiokafka.readthedocs.io/en/stable/
+    aiobotocore: https://aiobotocore.readthedocs.io/en/latest/
+    nats_py: https://github.com/nats-io/nats.py
+    pydantic: https://docs.pydantic.dev/
+    pytest: https://docs.pytest.org/en/latest/
+    asyncapi: https://www.asyncapi.com/
+    kombu: https://docs.celeryq.dev/projects/kombu/en/stable/
   social:
   - icon: fontawesome/brands/discord
     link: https://discord.gg/CJWmYpyFbc
