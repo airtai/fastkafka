@@ -1,4 +1,4 @@
-from propan import Context, Depends
+from faststream.utils import Context, Depends
 
 def nested_func(
     body: dict,

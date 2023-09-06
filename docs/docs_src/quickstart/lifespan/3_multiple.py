@@ -1,7 +1,8 @@
-from propan import PropanApp, Context
-from propan.annotations import ContextRepo
+from faststream import FastStream
+from faststream.utils import Context
+from faststream.utils import ContextRepo
 
-app = PropanApp()
+app = FastStream()
 
 @app.on_startup
 async def setup(context: ContextRepo):

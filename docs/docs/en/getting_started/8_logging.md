@@ -2,7 +2,7 @@
 
 **Propan** uses 2 previously configured loggers:
 
-* `propan` - using by PropanApp
+* `propan` - using by FastStream
 * `propan.access` - using by broker
 
 ## Logging requests
@@ -10,8 +10,8 @@
 To log requests, it is strongly recommended to use the `access_logger` of your broker, since it is available from the [Context](../../5_dependency/2_context) of your application.
 
 ```python
-from propan import RabbitBroker
-from propan.annotations import Logger
+from faststream.rabbit import RabbitBroker
+from faststream.annotations import Logger
 
 broker = RabbitBroker()
 
@@ -29,11 +29,11 @@ This approach has several advantages:
 
 If you use the **Propan CLI**, you can change the current logging level of the entire application directly from the command line.
 
-The `--log-level` flag sets the current logging level for both a broker and a PropanApp. This way you can configure the levels of not only default loggers, but also your own, if you use them inside **Propan**
+The `--log-level` flag sets the current logging level for both a broker and a FastStream. This way you can configure the levels of not only default loggers, but also your own, if you use them inside **Propan**
 
 <div class="termy">
 ```console
-$ propan run serve:app --log-level debug
+$ fastream run serve:app --log-level debug
 ```
 </div>
 
@@ -44,7 +44,7 @@ from faststream import FastStream
 from faststream.rabbit import RabbitBroker
 
 broker = RabbitBroker(logger=None) # disables broker logs
-app = PropanApp(broker, logger=None) # disables application logs
+app = FastStream(broker, logger=None) # disables application logs
 ```
 
 !!! warning
@@ -84,13 +84,13 @@ from faststream.rabbit import RabbitBroker
 logger = logging.getLogger("my_logger")
 
 broker = RabbitBroker(logger=logger)
-app = PropanApp(broker, logger=logger)
+app = FastStream(broker, logger=logger)
 ```
 
 Doing so, you will lose information about the context of the current request. However, you can get it directly from the context anywhere in your code:
 
 ```python
-from propan import context
+from faststream.utils import Context
 log_context: dict[str, str] = context.get_local("log_context")
 ```
 
@@ -107,5 +107,5 @@ access_logger = logging.getLogger("propan.access")
 Or by importing them from **Propan**
 
 ```python
-from propan.log import access_logger, logger
+from faststream.log.logging import access_logger, logger
 ```

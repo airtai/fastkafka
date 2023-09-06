@@ -2,14 +2,14 @@
     1. {{ constructor }}
 
         ```python
-        from propan import RabbitBroker
+        from faststream.rabbit import RabbitBroker
         broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
         ```
 
     2. {{ connect }}
 
         ```python
-        from propan import RabbitBroker
+        from faststream.rabbit import RabbitBroker
         broker = RabbitBroker()
         ...
         await broker.connect("amqp://guest:guest@localhost:5672/")

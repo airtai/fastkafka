@@ -1,5 +1,5 @@
 import pytest
-from propan.test import TestKafkaBroker
+from faststream.rabbit import TestRabbitBroker
 
 from main import broker
 

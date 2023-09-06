@@ -1,5 +1,7 @@
-from propan import PropanApp, Context, RabbitBroker
-from propan.annotations import ContextRepo
+from faststream import FastStream
+from faststream.rabbit import RabbitBroker
+from faststream.utils import Context
+from faststream.utils import ContextRepo
 
 broker = RabbitBroker("amqp://guest:guest@localhost:5672/")
 app = FastStream(broker)

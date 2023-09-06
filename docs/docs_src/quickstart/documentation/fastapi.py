@@ -1,4 +1,4 @@
-from propan.fastapi import RabbitRouter
+from faststream.rabbit import  RabbitRouter
 
 router = RabbitRouter(
     schema_url="/asyncapi",

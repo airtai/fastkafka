@@ -1,11 +1,12 @@
 from aiokafka.structs import ConsumerRecord
-from propan import PropanMessage
+from faststream.broker.message import StreamMessage
+from faststream.kafka.message import KafkaMessage
 
 async def parse_message(
     message: ConsumerRecord
-) -> PropanMessage[ConsumerRecord]:
+) -> StreamMessage[ConsumerRecord]:
     headers = {i: j.decode() for i, j in message.headers}
-    return PropanMessage(
+    return KafkaMessage(
         body=message.value,
         raw_message=message,
         message_id=f"{message.offset}-{message.timestamp}",

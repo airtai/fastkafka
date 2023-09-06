@@ -1,4 +1,4 @@
-from propan import RabbitBroker
+from faststream.rabbit import RabbitBroker
 
 async def custom_decode(msg, original_decoded):
     return original_decoded(msg)

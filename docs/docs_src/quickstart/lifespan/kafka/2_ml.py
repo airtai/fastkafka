@@ -1,5 +1,7 @@
-from propan import PropanApp, Context, KafkaBroker
-from propan.annotations import ContextRepo
+from faststream import FastStream
+from faststream.utils import Context
+from faststream.kafka import KafkaBroker
+from faststream.utils import ContextRepo
 
 broker = KafkaBroker("localhost:9092")
 app = FastStream(broker)

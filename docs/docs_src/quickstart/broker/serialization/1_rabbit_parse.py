@@ -1,10 +1,12 @@
 from aio_pika.message import IncomingMessage
-from propan import PropanMessage
+from faststream.broker.message import StreamMessage
+from faststream.rabbit.message import RabbitMessage
+
 
 async def parse_message(
     message: IncomingMessage
-) -> PropanMessage[IncomingMessage]:
-    return PropanMessage(
+) -> StreamMessage[IncomingMessage]:
+    return RabbitMessage(
         body=message.body,
         headers=message.headers,
         reply_to=message.reply_to or "",

@@ -1,9 +1,9 @@
 from faststream import FastStream
 from faststream.rabbit import RabbitBroker
-from propan.brokers.rabbit import RabbitQueue, RabbitExchange, ExchangeType
+from faststream.rabbit import RabbitExchange, RabbitQueue, ExchangeType
 
 broker = RabbitBroker()
-app = PropanApp(
+app = FastStream(
     broker=broker,
     title="Smartylighting Streetlights Propan API",
     version="1.0.0",

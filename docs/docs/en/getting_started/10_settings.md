@@ -61,7 +61,7 @@ Next, you would run the application passing the configurations as environment va
 
 <div class="termy">
 ```console
-$ URL="amqp://guest:guest@localhost:5672" propan run serve:app
+$ URL="amqp://guest:guest@localhost:5672" fastream run serve:app
 ```
 </div>
 
@@ -112,7 +112,7 @@ Now you can run the apllication with various `.env` files like:
 
 <div class="termy">
 ```console
-$ ENV=.local.env propan run serve:app
+$ ENV=.local.env fastream run serve:app
 ```
 </div>
 
@@ -120,7 +120,7 @@ Or, probably, production
 
 <div class="termy">
 ```console
-$ ENV=.production.env propan run serve:app
+$ ENV=.production.env fastream run serve:app
 ```
 </div>
 

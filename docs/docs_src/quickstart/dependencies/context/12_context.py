@@ -1,4 +1,4 @@
-from propan import apply_types, Context
+from faststream.utils import Context, apply_types
 
 @broker.hanlde("test")
 async def handler(body: dict):

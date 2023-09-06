@@ -2,8 +2,8 @@ from message_pb2 import Person
 
 from faststream import FastStream
 from faststream.rabbit import RabbitBroker
-from propan.annotations import Logger, NoCast
-from propan.brokers.rabbit import RabbitMessage
+from faststream.annotations import Logger, NoCast
+from faststream.rabbit.annotations import RabbitMessage
 
 broker = RabbitBroker()
 app = FastStream(broker)

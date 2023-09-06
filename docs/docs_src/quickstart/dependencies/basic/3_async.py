@@ -1,5 +1,5 @@
 import asyncio
-from propan import Depends, apply_types
+from faststream.utils import Depends, apply_types
 
 async def simple_dependency(a: int, b: int = 3):
     return a + b

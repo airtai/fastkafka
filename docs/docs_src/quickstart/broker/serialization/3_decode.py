@@ -1,7 +1,7 @@
 import json
-from propan import PropanMessage
+from faststream.broker.message import StreamMessage
 
-async def decode_message(message: PropanMessage):
+async def decode_message(message: StreamMessage):
     body = message.body
     if message.content_type is not None:
         return json.loads(body.decode())

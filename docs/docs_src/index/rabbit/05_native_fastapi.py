@@ -1,6 +1,6 @@
 from fastapi import Depends, FastAPI
 from pydantic import BaseModel
-from propan.fastapi import RabbitRouter
+from faststream.rabbit import  RabbitRouter
 
 router = RabbitRouter("amqp://guest:guest@localhost:5672")
 

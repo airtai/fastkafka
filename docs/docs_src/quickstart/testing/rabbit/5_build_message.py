@@ -1,4 +1,4 @@
-from propan.test.rabbit import build_message
+from faststream.rabbit.test import build_message
 
 from main import healthcheck
 

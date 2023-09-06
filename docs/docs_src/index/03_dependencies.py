@@ -1,5 +1,5 @@
 from logging import Logger
-from propan import Context, Depends
+from faststream.utils import Context, Depends
 
 ...
 

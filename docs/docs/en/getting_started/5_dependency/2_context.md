@@ -10,7 +10,7 @@
 
 **Context** already contains some global objects that you can always access:
 
-* **app** - the `PropanApp` object of your application
+* **app** - the `FastStream` object of your application
 * **broker** - current broker
 * **context** - the context itself, in which you can write your own fields
 * **logger** - logger used for your broker (tags messages with *message_id*)

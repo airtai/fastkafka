@@ -114,7 +114,7 @@ be cast to the type twice: as `return` these are dependencies and as the input a
 these types have the same annotation. Just keep it in mind. Or not... Anyway, I've warned you.
 
 ```python linenums="1"
-from propan import Depends, apply_types
+from faststream.utils import Depends, apply_types
 
 def simple_dependency(a: int, b: int = 3) -> str:
     return a + b  # 'return' is cast to `str` for the first time

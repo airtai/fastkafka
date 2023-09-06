@@ -1,18 +1,18 @@
-# **PropanApp**
+# **FastStream**
 
 If you are using the **Propan CLI**, you need to create an instance of the application for the project to work:
 
 ```python
-from propan import PropanApp
-app = PropanApp()
+from faststream import FastStream
+app = FastStream()
 ```
 
 !!! tip
-    When initializing, `PropanApp` writes itself to `ContextRepo` with the name `"app"`, so you can always access it from [context](../5_dependency/2_context).
+    When initializing, `FastStream` writes itself to `ContextRepo` with the name `"app"`, so you can always access it from [context](../5_dependency/2_context).
 
 ## Using Brokers
 
-In order for `PropanApp` to launch your broker, you need to put it in the application object.
+In order for `FastStream` to launch your broker, you need to put it in the application object.
 
 This is usually done when declaring the application itself:
 
@@ -24,7 +24,7 @@ But, sometimes you may need to initialize the broker elsewhere. In this case, yo
 
 ## Launching other apps
 
-If the broker is not passed to `PropanApp`, the following functions will still work:
+If the broker is not passed to `FastStream`, the following functions will still work:
 
 * Life Cycle Hooks
 * Hot-reload code
@@ -41,4 +41,4 @@ class ABCBroker:
         ...
 ```
 
-If your code satisfies this interface, **PropanApp** can be used as a convenient tool for project management.
+If your code satisfies this interface, **FastStream** can be used as a convenient tool for project management.

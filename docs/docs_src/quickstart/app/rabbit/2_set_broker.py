@@ -1,7 +1,7 @@
 from faststream import FastStream
 from faststream.rabbit import RabbitBroker
 
-app = PropanApp()
+app = FastStream()
 
 @app.on_startup
 def init_broker():

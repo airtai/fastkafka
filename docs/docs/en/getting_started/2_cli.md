@@ -11,7 +11,7 @@ $ propan --help
 
 Usage: propan [OPTIONS] COMMAND [ARGS]...
 
-  Generate, run, and manage Propan apps for greater development experience
+  Generate, run, and manage FastStream apps for greater development experience
 
 Options:
   --version             Show current platform, python and propan version
@@ -22,7 +22,7 @@ Options:
 
 Commands:
   create  Create a new Propan project at [APPNAME] directory
-  run     Run [MODULE:APP] Propan application
+  run     Run [MODULE:APP] FastStream application
 ```
 </div>
 
@@ -52,12 +52,12 @@ work with your project easily. Edit the code as much as you like - the new versi
 
 <div class="termy">
 ```console
-$ propan run app.app.serve:app --reload
+$ fastream run app.app.serve:app --reload
 
 2023-04-10 23:39:41,140 INFO     - Started reloader process [115536] using WatchFiles
-2023-04-10 23:39:41,145 INFO     - Propan app starting...
+2023-04-10 23:39:41,145 INFO     - FastStream app starting...
 2023-04-10 23:39:41,151 INFO     - `base_handler` waiting for messages
-2023-04-10 23:39:41,152 INFO     - Propan app started successfully! To exit press CTRL+C
+2023-04-10 23:39:41,152 INFO     - FastStream app started successfully! To exit press CTRL+C
 ```
 </div>
 
@@ -71,11 +71,11 @@ For example, we will pass the *.env* file to the context of our application:
 
 <div class="termy">
 ```console
-$ propan run serve:app --env=.env.dev
+$ fastream run serve:app --env=.env.dev
 
-2023-04-10 23:39:41,145 INFO     - Propan app starting...
+2023-04-10 23:39:41,145 INFO     - FastStream app starting...
 2023-04-10 23:39:41,151 INFO     - `base_handler` waiting for messages
-2023-04-10 23:39:41,152 INFO     - Propan app started successfully! To exit press CTRL+C
+2023-04-10 23:39:41,152 INFO     - FastStream app started successfully! To exit press CTRL+C
 ```
 </div>
 
@@ -89,10 +89,10 @@ All passed values can be of type `bool`, `str` or `list[str]`.
 In this case, the flags will be interpreted as follows:
 
 ```bash
-$ propan run app:app --flag       # flag = True
-$ propan run app:app --no-flag    # flag = False
-$ propan run app:app --my-flag    # my_flag = True
-$ propan run app:app --key value  # key = "value"
-$ propan run app:app --key 1 2    # key = ["1", "2"]
+$ fastream run app:app --flag       # flag = True
+$ fastream run app:app --no-flag    # flag = False
+$ fastream run app:app --my-flag    # my_flag = True
+$ fastream run app:app --key value  # key = "value"
+$ fastream run app:app --key 1 2    # key = ["1", "2"]
 ```
 You can use them both individually and together in unlimited quantities.

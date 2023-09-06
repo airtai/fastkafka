@@ -1,4 +1,4 @@
-from propan import Context
+from faststream.utils import Context
 
 @broker.hanlde("test")
 async def handler(

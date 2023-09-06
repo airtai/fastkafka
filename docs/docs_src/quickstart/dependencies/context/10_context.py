@@ -1,5 +1,5 @@
-from propan import apply_types, Context
-from propan.annotations import ContextRepo
+from faststream.utils import Context, apply_types
+from faststream.utils import ContextRepo
 
 @broker.hanlde("test")
 async def handler(

@@ -32,4 +32,4 @@ However, if you need more granularity in a complex scenario, for example, when c
     The parameters passed to `connect` override the parameters passed to the constructor. Be careful with this.
 
     In addition, calling `connect` again will have no effect. Therefore, you do not have to worry that `broker.start()` call
-    (used inside `PropanApp` to run the broker) will cause any errors.
+    (used inside `FastStream` to run the broker) will cause any errors.

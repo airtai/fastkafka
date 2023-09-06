@@ -1,6 +1,6 @@
 from faststream import FastStream
 from faststream.kafka import KafkaBroker
-from propan.annotations import ContextRepo
+from faststream.utils import ContextRepo
 from pydantic_settings import BaseSettings
 
 broker = KafkaBroker()

@@ -1,4 +1,5 @@
-from propan import Context, RabbitBroker
+from faststream.utils import Context
+from faststream.rabbit import RabbitBroker
 from typing_extension import Annotated
 
 Broker = Annotated[RabbitBroker, Context("broker")]

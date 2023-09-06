@@ -1,6 +1,6 @@
 from fastapi import Depends, FastAPI
 from pydantic import BaseModel
-from propan.fastapi import KafkaRouter
+from faststream.kafka import KafkaRouter
 
 router = KafkaRouter("localhost:9092")
 

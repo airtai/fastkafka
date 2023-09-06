@@ -1,4 +1,4 @@
-from propan import RabbitBroker
+from faststream.rabbit import RabbitBroker
 
 broker = RabbitBroker("amqp://guest:guest@127.0.0.1/")
 

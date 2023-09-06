@@ -1,5 +1,5 @@
-from propan import PropanApp
-from propan.rabbit import RabbitBroker
+from faststream import FastStream
+from faststream.rabbit import RabbitBroker
 
 from config import setting
 

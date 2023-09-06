@@ -32,7 +32,7 @@ Let's write some code for our example
 Now this application can be run using the following command to manage the environment:
 
 ```bash
-propan run serve:app --env .env.test
+fastream run serve:app --env .env.test
 ```
 
 ### Details
@@ -66,7 +66,8 @@ And put these settings in a global context
     Now we can access our settings anywhere in the application right from the context
 
     ```python
-    from propan import Context, apply_types
+    from faststream.utils import Context, apply_types
+
     @apply_types
     async def func(settings = Context()): ...
     ```

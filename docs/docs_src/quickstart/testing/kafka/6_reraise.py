@@ -1,6 +1,6 @@
 import pytest
 import pydantic
-from propan.test.kafka import build_message
+from faststream.kafka.test import build_message
 
 from main import healthcheck
 

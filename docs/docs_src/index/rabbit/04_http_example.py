@@ -1,4 +1,4 @@
-from propan import RabbitBroker
+from faststream.rabbit import RabbitBroker
 from sanic import Sanic
 
 app = Sanic("MyHelloWorldApp")

@@ -1,6 +1,6 @@
 === "RabbitMQ"
     ```python
-    from propan import RabbitBroker
+    from faststream.rabbit import RabbitBroker
     ```
 
 === "Kafka"

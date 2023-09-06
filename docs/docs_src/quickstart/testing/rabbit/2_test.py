@@ -1,4 +1,4 @@
-from propan.test import TestRabbitBroker
+from faststream.rabbit import TestRabbitBroker
 
 from main import broker
 

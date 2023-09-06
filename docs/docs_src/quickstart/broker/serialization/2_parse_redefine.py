@@ -1,4 +1,4 @@
-from propan import RabbitBroker
+from faststream.rabbit import RabbitBroker
 
 async def custom_parse(msg, original_parser):
     return original_parser(msg)

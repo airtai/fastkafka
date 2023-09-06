@@ -19,11 +19,11 @@ And just run this command:
 
 <div class="termy">
 ```console
-$ propan run serve:app
+$ fastream run serve:app
 
-2023-04-10 23:39:41,145 INFO     - Propan app starting...
+2023-04-10 23:39:41,145 INFO     - FastStream app starting...
 2023-04-10 23:39:41,151 INFO     - `base_handler` waiting for messages
-2023-04-10 23:39:41,152 INFO     - Propan app started successfully! To exit press CTRL+C
+2023-04-10 23:39:41,152 INFO     - FastStream app started successfully! To exit press CTRL+C
 ```
 </div>
 
@@ -51,12 +51,12 @@ Just run the created project:
 $ docker compose --file [projectname]/docker-compose.yaml up -d [broker]
 
 ### Run project
-$ propan run [projectname].app.serve:app --env=.env --reload
+$ fastream run [projectname].app.serve:app --env=.env --reload
 
 2023-04-10 23:39:41,140 INFO     - Started reloader process [115536] using WatchFiles
-2023-04-10 23:39:41,145 INFO     - Propan app starting...
+2023-04-10 23:39:41,145 INFO     - FastStream app starting...
 2023-04-10 23:39:41,151 INFO     - `base_handler` waiting for messages
-2023-04-10 23:39:41,152 INFO     - Propan app started successfully! To exit press CTRL+C
+2023-04-10 23:39:41,152 INFO     - FastStream app started successfully! To exit press CTRL+C
 ```
 </div>
 
