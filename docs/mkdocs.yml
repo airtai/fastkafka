@@ -103,26 +103,6 @@ plugins:
       build: true
 
 
-# markdown_extensions:
-#   toc:
-#     permalink: true
-#   markdown.extensions.codehilite:
-#     guess_lang: false
-#   mdx_include:
-#     base_path: .
-#   admonition: null
-#   codehilite: null
-#   extra: null
-#   pymdownx.superfences:
-#     custom_fences:
-#     - name: mermaid
-#       class: mermaid
-#       format: !!python/name:pymdownx.superfences.fence_code_format ''
-#   pymdownx.tabbed:
-#     alternate_style: true
-#   attr_list: null
-#   md_in_html: null
-
 markdown_extensions:  # do not reorder
   - toc:
       permalink: true
@@ -176,7 +156,3 @@ extra:
   alternate:
   - link: /
     name: en - English
-  - link: /docs/
-    name: docs
-  - link: /docs_src/
-    name: docs_src
