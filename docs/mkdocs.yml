@@ -33,6 +33,8 @@ nav:
   - Logging: getting_started/8_logging.md
   - Documentation: getting_started/9_documentation.md
   - Project Settings: getting_started/10_settings.md
+- Guides:
+  - guides/gen_serve_asyncapi_docs.md
 - API:
   - api/FastStream.md
   - kafka:
@@ -45,8 +47,6 @@ nav:
     - api/rabbit/TestRabbitBroker.md
 - Languages:
   - en: /
-  - docs: /docs/
-  - docs_src: /docs_src/
 theme:
   name: material
   palette:
