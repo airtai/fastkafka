@@ -1,0 +1,31 @@
+name: Deploy Docs
+on:
+    push:
+        branches:
+            - main
+            - master
+permissions:
+    contents: write
+jobs:
+    deploy_docs:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v4
+              with:
+                python-version: 3.x
+            - uses: actions/cache@v2
+              with:
+                key: ${{ github.ref }}
+                path: .cache
+            - run: pip install -e ".[dev]"
+            - run: ./scripts/build-docs.sh
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3  # nosemgrep: yaml.github-actions.security.third-party-action-not-pinned-to-commit-sha.third-party-action-not-pinned-to-commit-sha
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                force_orphan: true
+                publish_dir: ./docs/site
+                # The following lines assign commit authorship to the official GH-Actions bot for deploys to `gh-pages` branch.
+                user_name: github-actions[bot]
+                user_email: 41898282+github-actions[bot]@users.noreply.github.com
