@@ -63,3 +63,21 @@ jobs:
             ls -la mkdocs/site/
             exit 1
           fi
+
+  check:
+    if: always()
+
+    needs:
+      - test
+      - mypy_static_analysis
+      - bandit_static_analysis
+      - semgrep_static_analysis:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1 # nosemgrep
+        with:
+          jobs: ${{ toJSON(needs) }}
+
