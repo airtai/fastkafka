@@ -64,14 +64,16 @@ jobs:
             exit 1
           fi
 
-  check:
+  # https://github.com/marketplace/actions/alls-green#why
+  check: # This job does nothing and is only used for the branch protection
     if: always()
 
     needs:
       - test
       - mypy_static_analysis
       - bandit_static_analysis
-      - semgrep_static_analysis:
+      - semgrep_static_analysis
+      - test-rabbit-smoke
 
     runs-on: ubuntu-latest
 
