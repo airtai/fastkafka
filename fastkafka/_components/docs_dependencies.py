@@ -161,7 +161,7 @@ async def _install_docs_npm_deps() -> None:
     """
     with TemporaryDirectory() as d:
         cmd = (
-            "npx -y -p @asyncapi/generator ag https://raw.githubusercontent.com/asyncapi/asyncapi/master/examples/simple.yml @asyncapi/html-template -o "
+            "npx -y -p @asyncapi/generator ag https://raw.githubusercontent.com/asyncapi/spec/master/examples/simple-asyncapi.yml @asyncapi/html-template -o "
             + d
         )
 
