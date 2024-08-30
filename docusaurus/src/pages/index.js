@@ -7,7 +7,6 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepageWhatYouGet from '@site/src/components/HomepageWhatYouGet';
 import HomepageCommunity from '@site/src/components/HomepageCommunity';
 import HomepageFAQ from '@site/src/components/HomepageFAQ';
-import HomepageFastkafkaChat from '@site/src/components/HomepageFastkafkaChat';
 import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
 
 import styles from './index.module.css';
@@ -41,7 +40,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <HomepageFastkafkaChat />
         <HomepageWhatYouGet />
         <HomepageCommunity />
         <HomepageFAQ />
